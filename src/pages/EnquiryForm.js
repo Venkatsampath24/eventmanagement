@@ -28,33 +28,41 @@ function EnquiryForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Submit an Enquiry</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center px-6 py-12">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-full sm:max-w-lg">
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+          Submit Your Enquiry
+        </h2>
+        <p className="text-gray-600 mb-8 text-center">
+          Fill out the form below and we’ll get back to you shortly.
+        </p>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
+            <label className="block text-gray-700 font-medium mb-2">Event Name</label>
             <input
               type="text"
-              placeholder="Event Name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter event name"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
               onChange={(e) => setEventName(e.target.value)}
               required
             />
           </div>
           <div>
+            <label className="block text-gray-700 font-medium mb-2">Your Name</label>
             <input
               type="text"
-              placeholder="Your Name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter your name"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
               onChange={(e) => setCustomerName(e.target.value)}
               required
             />
           </div>
           <div>
+            <label className="block text-gray-700 font-medium mb-2">Email Address</label>
             <input
               type="email"
-              placeholder="Email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter your email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -62,7 +70,7 @@ function EnquiryForm() {
           <div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
             >
               Submit Enquiry
             </button>
